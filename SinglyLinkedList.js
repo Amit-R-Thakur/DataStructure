@@ -9,26 +9,31 @@ class SinglyLinkedList{
     constructor(){
         this.head=null
         this.tell=null
+        this.length=0
     }
     addLast(data){
         let newNode=new Node(data)
         if(!this.head){
              this.head=newNode
              this.tell=newNode
+             this.length++
              return
         }
         this.tell.next=newNode
         this.tell=newNode
+        this.length++
     }
     addStart(data){
         let newNode=new Node(data)
         if(!this.head){
             this.head=newNode;
             this.tell=newNode
+            this.length++
             return
         }
         newNode.next=this.head
         this.head=newNode
+        this.length++
     }
     deleteValue(val){
         if(!this.head)
@@ -38,12 +43,31 @@ class SinglyLinkedList{
             if(currentNode.next.data==val)
             {
                 currentNode.next=currentNode.next.next
+                this.length--
             }
             else
             {
                 currentNode=currentNode.next
             }
         }
+    }
+    deleteByIndex(inx){
+        if(inx==0){
+        let deletedNode=this.head
+        this.head=this.head.next
+        return `deleted ${deletedNode.data}`
+       }
+       if(inx>=this.length)
+       {
+           return "invalid index"
+       }
+       let currentNode=this.head
+       for(let i=0;i<inx-1;i++){
+           currentNode=currentNode.next
+       }
+       let deletedNode=currentNode.next
+       currentNode.next=currentNode.next.next
+       return `deleted ${deletedNode.data}`
     }
     print(){
         let currentNode=this.head
@@ -64,7 +88,9 @@ L1.addLast(10)
 L1.addStart(15)
 L1.addStart(45)
 L1.addLast(55)
-L1.deleteValue(5)
+// L1.deleteValue(5)
 L1.deleteValue(10)
+console.log(L1.deleteByIndex(1))
+console.log(L1.deleteByIndex(3))
 console.log(L1.print())
 // console.log(L1)
