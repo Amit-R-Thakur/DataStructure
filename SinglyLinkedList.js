@@ -30,6 +30,21 @@ class SinglyLinkedList{
         newNode.next=this.head
         this.head=newNode
     }
+    deleteValue(val){
+        if(!this.head)
+        return "List is Empty!"
+        let currentNode=this.head
+        while(currentNode.next){
+            if(currentNode.next.data==val)
+            {
+                currentNode.next=currentNode.next.next
+            }
+            else
+            {
+                currentNode=currentNode.next
+            }
+        }
+    }
     print(){
         let currentNode=this.head
         let arr=[]
@@ -49,5 +64,7 @@ L1.addLast(10)
 L1.addStart(15)
 L1.addStart(45)
 L1.addLast(55)
+L1.deleteValue(5)
+L1.deleteValue(10)
 console.log(L1.print())
 // console.log(L1)
