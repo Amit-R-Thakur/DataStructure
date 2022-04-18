@@ -16,5 +16,7 @@
  <h2> Doubly Linked List:-(npm run DoublyLinkedList)</h2>
 <h3>      Methods:-</h3>
   <ul>
-      
+       <li>initilize : let List = new DoublyLinkedList()</li>
+      <li>add data in Start : List.addStart(value)</li>
+      <li>print : console.log(List.print())</li>
   </ul>
