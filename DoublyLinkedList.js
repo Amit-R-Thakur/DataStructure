@@ -25,6 +25,25 @@ class DoublyLinkedList{
         this.length++
         return `${data} added at beginning!`
     }
+    addLast(data){
+        let newNode=new Node(data)
+        if(this.head==null){
+            this.head=newNode
+            this.tail=newNode
+            this.length++
+            return `${data} added in last!`
+        }
+        let currentNode=this.head
+        while(currentNode.next)
+        {
+            currentNode=currentNode.next
+        }
+        newNode.prev=currentNode
+        currentNode.next=newNode
+        this.length++
+        return `${data} added in last!`
+
+    }
 
     print(){
         let currentNode=this.head
@@ -42,4 +61,6 @@ console.log(List.addStart(10))
 console.log(List.addStart(30))
 console.log(List.addStart(60))
 console.log(List.addStart(80))
+console.log(List.print())
+console.log(List.addLast(90))
 console.log(List.print())
