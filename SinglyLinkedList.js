@@ -35,6 +35,24 @@ class SinglyLinkedList{
         this.head=newNode
         this.length++
     }
+    addAtIndex(data,index){
+        if(!this.head)
+        return "Node is empty"
+        console.log(index)
+        console.log(this.length)
+        if(index>=this.length||index<0)
+        return "Invalid index"
+        let currentNode=this.head
+        for(let i=0;i<index-1;i++){
+            currentNode=currentNode.next
+        }
+        // console.log(currentNode)
+        let newNode=new Node(data)
+        newNode.next=currentNode.next
+        currentNode.next=newNode
+        // console.log(newNode)
+        return `new node added at index ${index}!`
+    }
     deleteValue(val){
         if(!this.head)
         return "List is Empty!"
@@ -55,6 +73,7 @@ class SinglyLinkedList{
         if(inx==0){
         let deletedNode=this.head
         this.head=this.head.next
+        this.length--
         return `deleted ${deletedNode.data}`
        }
        if(inx>=this.length)
@@ -67,6 +86,7 @@ class SinglyLinkedList{
        }
        let deletedNode=currentNode.next
        currentNode.next=currentNode.next.next
+       this.length--
        return `deleted ${deletedNode.data}`
     }
     print(){
@@ -81,7 +101,7 @@ class SinglyLinkedList{
 }
 
 const L1=new SinglyLinkedList()
-L1.addLast(5)
+L1.addLast(9)
 L1.addLast(10)
 L1.addLast(5)
 L1.addLast(10)
@@ -92,5 +112,6 @@ L1.addLast(55)
 L1.deleteValue(10)
 console.log(L1.deleteByIndex(1))
 console.log(L1.deleteByIndex(3))
+console.log(L1.addAtIndex(35,2))
 console.log(L1.print())
 // console.log(L1)
