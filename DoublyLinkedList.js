@@ -42,7 +42,28 @@ class DoublyLinkedList{
         currentNode.next=newNode
         this.length++
         return `${data} added in last!`
-
+    }
+    addAtIndex(data,index){
+        if(index<0||index>=this.length)
+        return "invalid index number!"
+        let newNode=new Node(data)
+        if(index==0){
+            newNode.next=this.head
+            this.head.prev=newNode
+            this.head=newNode
+            this.length++
+            return `${data} added at Index ${index}!`
+        }
+        let currentNode=this.head
+        for(let i=0;i<index-1;i++){
+            currentNode=currentNode.next
+        }
+        currentNode.next.prev=newNode
+        newNode.next=currentNode.next
+        newNode.prev=currentNode
+        currentNode.next=newNode
+        this.length++
+        return `${data} added at Index ${index}!`
     }
 
     print(){
@@ -63,4 +84,6 @@ console.log(List.addStart(60))
 console.log(List.addStart(80))
 console.log(List.print())
 console.log(List.addLast(90))
+console.log(List.addAtIndex(20,2))
+console.log(List.addAtIndex(40,5))
 console.log(List.print())
