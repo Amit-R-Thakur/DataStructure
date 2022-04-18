@@ -1,8 +1,8 @@
 # Data Structure (JavaScript)
 
-## Singly Linked List:-(npm run SinglyLinkedList)
+<h2> Singly Linked List:-(npm run SinglyLinkedList)</h2>
 
-### Methods:-
+<h3>Methods:-</h3>
 
   <ul>
       <li>initilize : let List1 = new SinglyLinkedList()</li>
@@ -13,8 +13,8 @@
       <li>delete data by index : List1.deleteByIndex(index)</li>
       <li>print : console.log(List1.print())</li>
   </ul>
-  ## Doubly Linked List:-(npm run DoublyLinkedList)
-###      Methods:-
+ <h2> Doubly Linked List:-(npm run DoublyLinkedList)</h2>
+<h3>      Methods:-</h3>
   <ul>
       
   </ul>
