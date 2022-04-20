@@ -20,6 +20,7 @@
       <li>add data in Start : List.addStart(value)</li>
       <li>add data in Last : List.addLast(value)</li>
       <li>add data at given index : List.addAtIndex(value,index)</li>
+      <li>delete data by value : List.deleteByValue(value)</li>
       <li>print : console.log(List.print())</li>
 
   </ul>
