@@ -24,3 +24,14 @@
       <li>print : console.log(List.print())</li>
 
   </ul>
+   <h2> Stack:-(npm run Stack)</h2>
+<h3>      Methods:-</h3>
+  <ul>
+       <li>initilize : let stack = new Stack()</li>
+       <li>push:console.log(stack.push())</li>
+       <li>pop:console.log(stack.pop())</li>
+       <li>peek:console.log(stack.peek())</li>
+       <li>isEmpty:console.log(stack.isEmpty())</li>
+       <li>Clear:console.log(stack.Clear())</li>
+
+  </ul>
