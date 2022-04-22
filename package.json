@@ -8,6 +8,7 @@
     "SinglyLinkedList":"nodemon SinglyLinkedList",
     "DoublyLinkedList":"nodemon DoublyLinkedList",
     "Stack":"nodemon Stack",
+    "Queue":"nodemon Queue",
     "array":"nodemon array"
   },
   "keywords": [],

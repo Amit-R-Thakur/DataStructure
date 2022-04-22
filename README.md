@@ -35,3 +35,16 @@
        <li>Clear:console.log(stack.Clear())</li>
 
   </ul>
+  <h2> Queue:-(npm run Queue)</h2>
+<h3>      Methods:-</h3>
+  <ul>
+       <li>initilize : let queue = new Queue()</li>
+        <li>console.log(queue.Enqueue(value))</li>
+        <li>console.log(queue.Dequeue())</li>
+        <li>console.log(queue.IsEmpty())</li>
+        <li>console.log(queue.Peek())</li>
+        <li>console.log(queue.Length())</li>
+
+
+
+  </ul>
